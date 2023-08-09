@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import SelectionForm from "./components/SelectionForm/SelectionForm";
+import CameraRoll from "./components/CameraRoll/CameraRoll";
+import "./styles/App.scss"
+import rover from "./assets/images/rover.png";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className="explore-form">
+        <SelectionForm />
+        <img src={rover} alt="mars rover" />
+      </div>
+      <CameraRoll />
+    </>
   );
 }
 

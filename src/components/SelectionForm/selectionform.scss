@@ -1,0 +1,23 @@
+@import "../../styles/variable.scss";
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(14px, 4vw, 20px);
+
+    label {
+        margin-bottom: 10px;
+    }
+
+    &__rover-picker, &__date-picker {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 20px;
+        padding: 1em;
+        border-radius: 10px;
+        border: none;
+    }
+
+    &__rover-picker {
+        border-right: 1em solid transparent
+    }
+}
