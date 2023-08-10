@@ -3,7 +3,8 @@ import axios from 'axios';
 
 export const fetchImages = createAsyncThunk(
     'content/fetchImages',
-    async (apiKey, camera, date) => {
+    async (roverData) => {
+        const {apiKey, camera, date} = roverData;
         const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${apiKey}&camera=${camera}&earth_date=${date}`;
         const res = await axios(url);
         const images = res.data;
@@ -14,8 +15,6 @@ export const fetchImages = createAsyncThunk(
 const imagesSlice = createSlice({
     name: "images",
     initialState: {
-        camera: "",
-        date: "",
         images: [],
         status: "loading",
     },
