@@ -17,15 +17,12 @@ export default function SelectionForm() {
 
         const formJson = Object.fromEntries(formData.entries());
     
-        console.log(await dispatch(fetchImages({
+        await dispatch(fetchImages({
             apiKey: "Qz5OD96oh9G7P9AVZtF1LIEqjSpCivx4l2CsGXsw", 
             camera: formJson.rovers.toLowerCase(), 
             date: formJson.date
-        })));
+        }));
     }
-
-    // const data = useSelector((state) => state.images.data)
-    // const status = useSelector((state) => state.images.status);
 
 
     return(
